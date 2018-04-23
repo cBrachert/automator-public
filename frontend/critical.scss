@@ -1,0 +1,57 @@
+
+@import 'scss/config';
+
+html, body {
+
+  font-family: Helvetica, Arial;
+  margin: 0;
+  padding: 0;
+
+}
+
+
+@keyframes loader {
+
+  from {width: 0; opacity: 1;}
+  to {width: 100%; opacity: 1;}
+
+}
+
+@keyframes loader-finish {
+
+  from {width: inherit; opacity: 1;}
+  to {width: 100%; opacity: 0;}
+
+}
+
+.primary-loader {
+
+  position: fixed;
+  z-index: 100000;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 3px;
+
+  div {
+
+    height: 100%;
+    background: $accent;
+    width: 100%;
+    opacity: 1;
+    animation: loader 15s cubic-bezier(0, 0, 0, 1);
+    -webkit-animation: loader 15s cubic-bezier(0, 0, 0, 1);
+    -moz-animation: loader 15s cubic-bezier(0, 0, 0, 1);
+    -op-animation: loader 15s cubic-bezier(0, 0, 0, 1);
+
+  }
+
+  .inactive {
+    opacity: 0;
+    animation: loader-finish 0.5s ease-out;
+    -webkit-animation: loader-finish 0.5s ease-out;
+    -moz-animation: loader-finish 0.5s ease-out;
+    -op-animation: loader-finish 0.5s ease-out;
+  }
+
+}

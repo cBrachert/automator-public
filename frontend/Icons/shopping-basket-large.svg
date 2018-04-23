@@ -1,0 +1,11 @@
+<svg width="48" height="48" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>
+        shopping-basket-large
+    </title>
+    <g stroke="currentColor" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle cx="38.5" cy="41.5" r="3"/>
+        <circle cx="22.5" cy="41.5" r="3"/>
+        <path d="M13.8,19.5 L43.8,19.5 M10.6,11.5 L46.5,11.5 L41,27.5 L16.9,27.5"/>
+        <path d="M1 3.5L7.5 3.5 20 35.5"/>
+    </g>
+</svg>

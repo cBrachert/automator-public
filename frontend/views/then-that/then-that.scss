@@ -1,0 +1,45 @@
+
+.then-that {
+
+    .then-that--list {
+        h3 {
+            font-weight: 300;
+            margin-bottom: 4px;
+            margin-left: 16px;
+            color: $primary;
+        }
+        .then-that--item {
+            
+            font-weight: 300;
+            font-size: 24px;
+            line-height: 64px;
+            border-bottom: 1px solid rgba($primary-light, 0.15);
+            padding: 16px;
+            outline: none;
+            cursor: pointer;
+
+            &:nth-child(2) {
+                border-top: 1px solid rgba($primary-light, 0.15);
+            }
+            &:last-child {
+                border-bottom: none;
+            }
+            .then-that--title {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+            .then-that--icon {
+                // line-height: 56px;
+                width: 64px;
+                height: 64px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                margin-right: 16px;
+            }
+        
+        }
+    }
+
+}

@@ -1,0 +1,95 @@
+
+<div class="home">
+    <h1>
+        If
+        <a ui-sref="ifThis" class="home--this" ng-if="automation.conditions.length === 0">
+            this
+            <md-icon>keyboard_arrow_down</md-icon>
+        </a>
+        <div ng-repeat="condition in automation.conditions track by $index">
+
+            <div class="home--condition">
+                <div layout="row">
+                    <div flex>
+                        <div class="home--condition-title">
+                            {{ condition.title }}
+                        </div>
+                        <div class="home--condition-description">
+                            {{ condition.description }}
+                        </div>
+                    </div>
+                    <md-icon>keyboard_arrow_down</md-icon>
+                </div>
+            </div>
+
+            <div class="home--condition-op" ng-if="$index < automation.conditions.length - 1">
+                <span ng-if="automation.op === 'and'">
+                    and
+                </span>
+                <span ng-if="automation.op === 'or'">
+                    or
+                </span>
+            </div>
+            
+        </div>
+        <a class="home--condition-add" ng-if="automation.conditions.length > 0 && !state.adding" ng-click="state.adding = true">
+            <md-icon>add</md-icon>
+        </a>
+        <div class="home--condition-add-op" ng-click="setOpAndAddCondition('and')" ng-if="state.adding && automation.op !== 'or'">
+            and
+        </div>
+        <div class="home--condition-add-op" ng-click="setOpAndAddCondition('or')" ng-if="state.adding && automation.op !== 'and'">
+            or
+        </div>
+        <br ng-if="!automation.conditions || state.adding">
+        happens in my car,
+    </h1>
+    
+    <h1>
+        I want
+        <a ui-sref="thenThat" class="home--that" 
+           ng-if="automation.actions.length === 0"
+           ng-class="{highlighted: automation.conditions.length > 0}">
+            that
+            <md-icon>keyboard_arrow_down</md-icon>
+        </a>
+        <div ng-repeat="action in automation.actions track by $index">
+
+                <div class="home--action">
+                    <div layout="row">
+                        <div flex>
+                            <div class="home--action-title">
+                                {{ action.title }}
+                            </div>
+                            <div class="home--action-description">
+                                {{ action.description }}
+                            </div>
+                        </div>
+                        <md-icon>keyboard_arrow_down</md-icon>
+                    </div>
+                </div>
+                
+            </div>
+        <br ng-if="automation.actions.length === 0">
+        to happen.
+    </h1>
+
+    <div class="home--automations" ng-if="automation.conditions.length == 0" ng-click="openAutomations()">
+        View automations
+        <md-icon>keyboard_arrow_right</md-icon>
+    </div>
+
+    <div class="home--new-automation-spacer" ng-if="automation.conditions.length > 0"></div>
+    <div class="home--new-automation" layout="row" layout-wrap ng-if="automation.conditions.length > 0">
+        <md-input-container flex="100">
+            <label>Name</label>
+            <input ng-model="automation.title">
+        </md-input-container>
+        <div flex="100">
+            <div class="home--start-automation" ng-class="{active: automation.actions.length > 0}" ng-click="activate()">
+                Activate
+            </div>
+        </div>
+    </div>
+
+</div>

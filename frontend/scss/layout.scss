@@ -1,0 +1,55 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.toggle-button {
+
+    padding: 8px 16px;
+    border: 1px solid $accent;
+    border-radius: 4px;
+    float: left;
+    margin: 8px 8px 8px 0;
+    outline: none;
+
+    &.active {
+        color: white;
+        background: $accent;
+    }
+
+}
+
+.clear {
+    clear: both;
+}
+
+md-slider .md-slider-wrapper {
+    .md-track-fill {
+        background: $accent;
+    }
+    .md-thumb:after {
+        background: $accent;
+        border-color: $accent;
+    }
+}
+
+md-input-container.md-input-focused {
+
+    label {
+        color: $accent !important;
+    }
+
+    input, textarea {
+        border-color: $accent !important;
+    }
+
+}
+
+md-input-container {
+    margin: 12px 0 8px;
+    .md-errors-spacer {
+        display: none;
+    }
+}

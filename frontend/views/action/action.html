@@ -1,0 +1,49 @@
+
+<div class="action">
+    
+    <div layout="row" layout-wrap>
+        <div flex="100" ng-repeat="action in actions track by $index">
+            <div layout="row" class="action--item" ng-click="toggle(action)">
+                <h3 flex>
+                    {{ action.title }}
+                </h3>
+                <md-icon ng-if="!action.active">keyboard_arrow_down</md-icon>
+                <md-icon ng-if="action.active">keyboard_arrow_up</md-icon>
+            </div>
+
+            <div class="action--form" ng-if="action.active">
+                
+                <form ng.submit="saveEmail()">
+
+                    <div layout="row" layout-wrap>
+                        <md-input-container flex="100">
+                            <label>To</label>
+                            <input type="email" ng-model="action.recipient">
+                        </md-input-container>
+                        <md-input-container flex="100">
+                            <label>CC</label>
+                            <input type="email" ng-model="action.cc">
+                        </md-input-container>
+                        <md-input-container flex="100">
+                            <label>Subject</label>
+                            <input ng-model="action.subject">
+                        </md-input-container>
+                        <md-input-container flex="100">
+                            <label>Message</label>
+                            <textarea rows="3" ng-model="action.message"></textarea>
+                        </md-input-container>
+                    </div>
+
+                    <div class="action--submit" ng-click="addAction(action)" ng-class="{active: action.recipient && action.subject && action.message}">
+                        <md-icon>done</md-icon>
+                    </div>
+                    <div class="clear"></div>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>

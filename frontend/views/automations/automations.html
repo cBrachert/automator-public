@@ -1,0 +1,42 @@
+
+<div class="automations">
+    
+    <div class="automations--automation" ng-repeat="automation in automations track by $index">
+        <h3> {{ automation.title }} </h3>
+
+        <h4>If</h4>
+
+        <div ng-repeat="condition in automation.conditions track by $index">
+            <div class="automations--item">
+                <p class="automations--title">
+                    {{ condition.title }}
+                </p>
+                <p class="automations--description">
+                    {{ condition.description }}
+                </p>
+            </div>
+            <div class="automations--op" ng-if="$index < automation.conditions.length - 1">
+                {{ automation.op }}
+            </div>
+        </div>
+
+        <h4>Then</h4>
+
+        <div ng-repeat="action in automation.actions track by $index">
+            <div class="automations--item">
+                <p class="automations--title">
+                    {{ action.title }}
+                </p>
+                <p class="automations--description">
+                    {{ action.description }}
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="automations--reset" ng-click="reset()">
+        Reset
+    </div>
+
+</div>

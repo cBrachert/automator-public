@@ -1,0 +1,24 @@
+
+<div class="if-this">
+
+    <div class="if-this--list">
+        <h3>Most Popular</h3>
+        <div class="if-this--item" ng-repeat="item in popular track by $index" layout="row"
+             ng-click="open(item)">
+            <img ng-src="{{ './icons/' + item.icon }}">
+            <div flex>{{ item.name }}</div>
+            <md-icon>keyboard_arrow_right</md-icon>
+        </div>
+    </div>
+    
+    <div class="if-this--list">
+        <h3>All</h3>
+        <div class="if-this--item" ng-repeat="item in items track by $index" layout="row"
+             ng-click="open(item)">
+            <img ng-src="{{ './icons/' + item.icon }}">
+            <div flex>{{ item.name }}</div>
+            <md-icon>keyboard_arrow_right</md-icon>
+        </div>
+    </div>
+
+</div>

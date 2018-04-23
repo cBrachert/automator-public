@@ -1,0 +1,33 @@
+
+.action {
+    padding: 16px;
+
+    .action--item {
+        cursor: pointer;
+        outline: none;
+        md-icon {
+            color: $accent;
+        }
+    }
+
+    .action--form {
+        margin-bottom: 32px;
+    }
+
+    .action--submit {
+        border: 1px solid $accent;
+        border-radius: 50%;
+        display: block;
+        padding: 12px;
+        float: right;
+        outline: none;
+        &.active {
+            background: $accent;
+            cursor: pointer;
+            md-icon {
+                color: white;
+            }
+        }
+    }
+
+}

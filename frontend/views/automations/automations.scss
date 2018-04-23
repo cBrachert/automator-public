@@ -1,0 +1,51 @@
+
+.automations {
+
+    padding: 8px;
+
+    .automations--automation {
+        border: 1px solid $primary;
+        border-radius: 4px;
+        margin-bottom: 16px;
+        padding: 8px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    h4 {
+        font-size: 20px;
+        color: $primary-light;
+    }
+
+    .automations--item {
+
+        .automations--title {
+            margin: 0;
+        }
+        .automations--description {
+            margin: 0;
+            color: $primary-light;
+        }
+
+    }
+
+    .automations--op {
+        padding: 4px 8px;
+        margin: 4px 0;
+        border: 1px solid $primary;
+        border-radius: 4px;
+        display: inline-block;
+    }
+
+    .automations--reset {
+        background: $accent-dark;
+        color: white;
+        text-align: center;
+        padding: 8px;
+        cursor: pointer;
+        outline: none;
+    }
+
+}

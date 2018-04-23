@@ -1,0 +1,51 @@
+
+.condition {
+    padding: 16px;
+
+    .condition--item {
+        cursor: pointer;
+        outline: none;
+        md-icon {
+            color: $accent;
+        }
+    }
+
+    .condition--form {
+        margin-bottom: 32px;
+        h4 {
+            margin: 8px 0 0;
+            color: $primary-light;
+        }
+        .condition--value {
+            position: relative;
+            top: 8px;
+        }
+        .condition--submit {
+            border: 1px solid $accent;
+            border-radius: 50%;
+            display: block;
+            padding: 12px;
+            float: right;
+            outline: none;
+            &.active {
+                background: $accent;
+                cursor: pointer;
+                md-icon {
+                    color: white;
+                }
+            }
+        }
+        #map {
+            height: 400px;
+            margin: 0 -16px;
+        }
+    }
+
+}
+
+.condition--search {
+    border: none;
+    padding: 11px 4px;
+    margin-top: 10px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.16);
+}

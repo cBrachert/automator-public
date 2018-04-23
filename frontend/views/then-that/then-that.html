@@ -1,0 +1,24 @@
+
+<div class="then-that">
+
+    <div class="then-that--list">
+        <h3>Most Popular</h3>
+        <div class="then-that--item" ng-repeat="item in popular track by $index" layout="row"
+                ng-click="open(item)">
+            <div class="then-that--icon" style="background-image: url({{ './icons/' + item.icon }})"></div>
+            <div class="then-that--title" flex>{{ item.name }}</div>
+            <md-icon>keyboard_arrow_right</md-icon>
+        </div>
+    </div>
+        
+    <div class="then-that--list">
+        <h3>All</h3>
+        <div class="then-that--item" ng-repeat="item in items track by $index" layout="row"
+                ng-click="open(item)">
+            <div class="then-that--icon" style="background-image: url({{ './icons/' + item.icon }})"></div>
+            <div class="then-that--title" flex>{{ item.name }}</div>
+            <md-icon>keyboard_arrow_right</md-icon>
+        </div>
+    </div>
+
+</div>

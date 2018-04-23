@@ -1,0 +1,100 @@
+
+<div class="condition">
+    
+    <div layout="row" layout-wrap>
+        <div flex="100" ng-repeat="trigger in triggers track by $index">
+            <div layout="row" class="condition--item" ng-click="toggle(trigger)">
+                <h3 flex>
+                    {{ trigger.title }}
+                </h3>
+                <md-icon ng-if="!trigger.active">keyboard_arrow_down</md-icon>
+                <md-icon ng-if="trigger.active">keyboard_arrow_up</md-icon>
+            </div>
+
+            <div class="condition--form" ng-if="trigger.active && batteryForm()">
+                <h4>
+                    Select an operator
+                </h4>
+                <div class="toggle-button"
+                     ng-class="{active: trigger.operator === 'less'}"
+                     ng-click="trigger.operator = 'less'">
+                    smaller
+                </div>
+                <div class="toggle-button"
+                     ng-class="{active: trigger.operator === 'equal'}"
+                     ng-click="trigger.operator = 'equal'">
+                    equal
+                </div>
+                <div class="toggle-button"
+                     ng-class="{active: trigger.operator === 'greater'}"
+                     ng-click="trigger.operator = 'greater'">
+                    bigger
+                </div>
+                <div class="clear"></div>
+
+                <div layout="row">
+                    <h4 flex>
+                        Select a value
+                    </h4>
+                    <span class="condition--value">
+                        {{trigger.value}}%
+                    </span>
+                </div>
+                <md-slider-container>
+                    <md-slider flex min="0" max="100" ng-model="trigger.value"></md-slider>
+                </md-slider-container>
+
+                <div class="condition--submit" ng-click="addCondition(trigger)"
+                     ng-class="{active: trigger.value && trigger.operator}">
+                    <md-icon>done</md-icon>
+                </div>
+                <div class="clear"></div>
+
+            </div>
+
+            <div class="condition--form" ng-if="trigger.active && locationForm()">
+                <div id="map"></div>
+                <h4>
+                    Distance from car to point on map
+                </h4>
+                <div class="toggle-button"
+                        ng-class="{active: trigger.operator === 'less'}"
+                        ng-click="trigger.operator = 'less'">
+                    closer
+                </div>
+                <div class="toggle-button"
+                        ng-class="{active: trigger.operator === 'equal'}"
+                        ng-click="trigger.operator = 'equal'">
+                    exactly at
+                </div>
+                <div class="toggle-button"
+                        ng-class="{active: trigger.operator === 'greater'}"
+                        ng-click="trigger.operator = 'greater'">
+                    further
+                </div>
+                <div class="clear"></div>
+
+                <div layout="row">
+                    <h4 flex>
+                        Select a value
+                    </h4>
+                    <span class="condition--value">
+                        {{trigger.value}} meters
+                    </span>
+                </div>
+                <md-slider-container>
+                    <md-slider flex min="0" max="10000" ng-model="trigger.value"></md-slider>
+                </md-slider-container>
+
+                <div class="condition--submit" ng-click="addCondition(trigger)"
+                     ng-class="{active: trigger.value && trigger.operator}">
+                    <md-icon>done</md-icon>
+                </div>
+                <div class="clear"></div>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>

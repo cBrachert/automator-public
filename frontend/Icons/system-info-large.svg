@@ -1,0 +1,9 @@
+<svg width="48" height="48" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>
+        system-info-large
+    </title>
+    <g stroke="currentColor" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M23.5,20 L23.5,32 M23.5,18 L23.5,15"/>
+        <circle cx="23.5" cy="23.5" r="22"/>
+    </g>
+</svg>

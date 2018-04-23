@@ -1,0 +1,13 @@
+<svg width="48" height="48" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>
+        news-large
+    </title>
+    <g stroke="currentColor" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M2.5 17.5L2.5 37.5 34.5 37.5 34.5 9.5 10.5 9.5z"/>
+        <path d="M39.2 18.5L45.1 18.5 34.5 37.5"/>
+        <path d="M34.5 14.5L40.2 14.5 34.5 37.5"/>
+        <path d="M10.5 9.5L10.5 17.5 2.5 17.5"/>
+        <path d="M7,30.5 L30,30.5"/>
+        <path d="M7,24.5 L30,24.5"/>
+    </g>
+</svg>

@@ -1,0 +1,127 @@
+
+.home {
+    padding: 64px 16px;
+    h1 {
+        font-weight: 300;
+        margin: 48px 0;
+        font-size: 36px;
+
+        a {
+
+            display: inline-block;
+            border-bottom: 1px solid $primary-dark;
+            padding: 0 8px;
+            margin: 0 8px;
+            color: $primary-light;
+            cursor: pointer;
+            outline: none;
+            text-decoration: none;
+
+            &.home--this {
+                border-color: $accent;
+            }
+
+            &.home--that.highlighted {
+                border-color: $accent;
+            }
+
+        }
+
+    }
+    .home--automations {
+        color: $primary-light;
+        font-weight: 300;
+        font-size: 24px;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 24px 0;
+    }
+
+    .home--condition, .home--action {
+        font-size: 16px;
+        padding: 4px;
+        border: 1px solid $primary;
+        border-radius: 4px;
+        margin: 4px 0;
+        .home--condition-title, .home--action-title {
+            color: $primary-dark;
+        }
+        .home--condition-description, .home--action-description {
+            color: $primary-light;
+        }
+    }
+
+    .home--condition-op {
+        border: 1px solid $primary;
+        border-radius: 4px;
+        margin: 4px 0;
+        display: inline-block;
+        padding: 0 8px;
+    }
+
+    .home--condition-add {
+        border: 1px solid $primary;
+        border-radius: 4px;
+        margin: 4px 0;
+        display: inline-block;
+        width: 32px;
+        text-align: center;
+        cursor: pointer;
+        outline: none;
+        md-icon {
+            color: $primary-dark;
+            position: relative;
+            top: -2px;
+        }
+    }
+
+    .home--condition-add-op {
+        border: 1px solid $primary;
+        border-radius: 4px;
+        margin: 4px 0;
+        display: inline-block;
+        padding: 0 8px;
+        cursor: pointer;
+        outline: none;
+    }
+
+    .home--new-automation {
+        background: $primary-dark;
+        color: white;
+        padding: 16px;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        md-input-container {
+            margin-bottom: 12px;
+            label {
+                color: white;
+            }
+            input {
+                color: white;
+                border-color: white;
+            }
+        }
+        .home--start-automation {
+            background: rgba($accent, 0.1);
+            font-size: 25px;
+            text-align: center;
+            padding: 8px 0;
+            color: rgba(255, 255, 255, 0.5);
+            &.active {
+                background: $accent;
+                color: white;
+            }
+        }
+    }
+
+    .home--new-automation-spacer {
+        height: 135px;
+        display: block;
+    }
+
+}

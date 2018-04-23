@@ -1,0 +1,10 @@
+<svg width="48" height="48" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>
+        system-save-as-large
+    </title>
+    <g stroke="currentColor" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M32.5,20 L32.5,30.5 L14.5,30.5 L14.5,20 M23.5,16 L23.5,27"/>
+        <path d="M27.9 22.6L23.5 27 19.1 22.6"/>
+        <circle cx="23.5" cy="23.5" r="22"/>
+    </g>
+</svg>
